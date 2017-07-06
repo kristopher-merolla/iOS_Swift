@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ninjaGold" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kT-LR-0p6">
+                                <rect key="frame" x="20" y="28" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhA-jJ-hnw">
+                                <rect key="frame" x="78" y="28" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ic-KC-DwG">
+                                <rect key="frame" x="20" y="57" width="35" height="30"/>
+                                <state key="normal" title="Farm"/>
+                                <connections>
+                                    <action selector="farm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ArL-SU-ybd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TQ-9E-gua">
+                                <rect key="frame" x="20" y="95" width="35" height="30"/>
+                                <state key="normal" title="Cave"/>
+                                <connections>
+                                    <action selector="cave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1O2-dw-O37"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4V-ld-x2v">
+                                <rect key="frame" x="20" y="133" width="45" height="30"/>
+                                <state key="normal" title="House"/>
+                                <connections>
+                                    <action selector="house:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfw-NA-Zfz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpa-Zz-8PR">
+                                <rect key="frame" x="20" y="171" width="47" height="30"/>
+                                <state key="normal" title="Casino"/>
+                                <connections>
+                                    <action selector="casino:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syU-y9-QbF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wep-Kv-bY0">
+                                <rect key="frame" x="20" y="353" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hpA-on-hoO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Earned -50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aep-JA-cFL">
+                                <rect key="frame" x="78" y="62" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Earned -50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTY-da-ZxH">
+                                <rect key="frame" x="78" y="100" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Earned -50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skf-GS-ajA">
+                                <rect key="frame" x="78" y="137" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Earned -50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2R-bU-F59">
+                                <rect key="frame" x="78" y="176" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5ic-KC-DwG" firstAttribute="top" secondItem="0kT-LR-0p6" secondAttribute="bottom" constant="8" id="04N-TX-hiK"/>
+                            <constraint firstItem="3TQ-9E-gua" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0nv-AI-rO0"/>
+                            <constraint firstItem="c4V-ld-x2v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4jX-Hm-JrG"/>
+                            <constraint firstItem="aep-JA-cFL" firstAttribute="leading" secondItem="yhA-jJ-hnw" secondAttribute="leading" id="HMP-fF-ztO"/>
+                            <constraint firstItem="dpa-Zz-8PR" firstAttribute="top" secondItem="c4V-ld-x2v" secondAttribute="bottom" constant="8" id="HVx-AS-avq"/>
+                            <constraint firstItem="yhA-jJ-hnw" firstAttribute="centerY" secondItem="0kT-LR-0p6" secondAttribute="centerY" id="IaN-3b-8DP"/>
+                            <constraint firstItem="aep-JA-cFL" firstAttribute="centerY" secondItem="5ic-KC-DwG" secondAttribute="centerY" id="KCY-9l-Ndq"/>
+                            <constraint firstItem="0kT-LR-0p6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Lre-Mt-Asv"/>
+                            <constraint firstItem="3TQ-9E-gua" firstAttribute="top" secondItem="5ic-KC-DwG" secondAttribute="bottom" constant="8" id="N7C-BL-8sw"/>
+                            <constraint firstItem="wep-Kv-bY0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OL3-WP-Jg4"/>
+                            <constraint firstItem="skf-GS-ajA" firstAttribute="centerY" secondItem="c4V-ld-x2v" secondAttribute="centerY" id="QBq-Nl-Fmd"/>
+                            <constraint firstItem="aTY-da-ZxH" firstAttribute="centerY" secondItem="3TQ-9E-gua" secondAttribute="centerY" id="Y7G-iP-UPq"/>
+                            <constraint firstItem="dpa-Zz-8PR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YJz-Yr-mg8"/>
+                            <constraint firstItem="yhA-jJ-hnw" firstAttribute="leading" secondItem="0kT-LR-0p6" secondAttribute="trailing" constant="8" id="Ybm-z8-m9c"/>
+                            <constraint firstItem="c4V-ld-x2v" firstAttribute="top" secondItem="3TQ-9E-gua" secondAttribute="bottom" constant="8" id="aFE-wq-C2a"/>
+                            <constraint firstItem="A2R-bU-F59" firstAttribute="centerY" secondItem="dpa-Zz-8PR" secondAttribute="centerY" id="bKu-Ue-peV"/>
+                            <constraint firstItem="A2R-bU-F59" firstAttribute="leading" secondItem="skf-GS-ajA" secondAttribute="leading" id="c0N-Hw-1md"/>
+                            <constraint firstItem="skf-GS-ajA" firstAttribute="leading" secondItem="aTY-da-ZxH" secondAttribute="leading" id="cww-F4-QFS"/>
+                            <constraint firstItem="0kT-LR-0p6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mII-ST-kNx"/>
+                            <constraint firstItem="aTY-da-ZxH" firstAttribute="leading" secondItem="aep-JA-cFL" secondAttribute="leading" id="mU3-9U-GcE"/>
+                            <constraint firstItem="wep-Kv-bY0" firstAttribute="top" secondItem="dpa-Zz-8PR" secondAttribute="bottom" constant="152" id="tPy-f5-qS2"/>
+                            <constraint firstItem="5ic-KC-DwG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xsG-R5-fRv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="casinoEarn" destination="A2R-bU-F59" id="CDe-Ae-UFc"/>
+                        <outlet property="caveEarn" destination="aTY-da-ZxH" id="Pnp-vm-Jy5"/>
+                        <outlet property="farmEarn" destination="aep-JA-cFL" id="iIL-Ep-Dqs"/>
+                        <outlet property="houseEarn" destination="skf-GS-ajA" id="ErQ-In-EHK"/>
+                        <outlet property="score" destination="yhA-jJ-hnw" id="0Ak-HQ-xEB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
