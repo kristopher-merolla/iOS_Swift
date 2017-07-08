@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ciP-2L-38n">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="W9j-Xp-T0m">
+            <objects>
+                <viewController id="ciP-2L-38n" customClass="ViewController" customModule="augmentReality" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eLn-fU-Plt"/>
+                        <viewControllerLayoutGuide type="bottom" id="gXa-gA-Afy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IhH-bs-QJy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="by6iOoZ.jpg" highlightedImage="by6iOoZ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XFo-gU-Gic">
+                                <rect key="frame" x="20" y="0.0" width="374" height="736"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Augment Your Reality!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpX-ux-sR6">
+                                <rect key="frame" x="20" y="36" width="374" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.99935048818588257" green="0.62280547618865967" blue="0.32816031575202942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZj-BV-CoU">
+                                <rect key="frame" x="28" y="614" width="374" height="114"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" red="0.99935048818588257" green="0.62280547618865967" blue="0.32816031575202942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" modalTransitionStyle="flipHorizontal" id="VmD-bf-TtR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IZj-BV-CoU" firstAttribute="leading" secondItem="IhH-bs-QJy" secondAttribute="leadingMargin" constant="8" id="K2w-tL-7Xw"/>
+                            <constraint firstItem="qpX-ux-sR6" firstAttribute="top" secondItem="eLn-fU-Plt" secondAttribute="bottom" constant="16" id="U9x-Aw-eVu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XFo-gU-Gic" secondAttribute="trailing" id="XT7-LU-FTh"/>
+                            <constraint firstItem="qpX-ux-sR6" firstAttribute="trailing" secondItem="IhH-bs-QJy" secondAttribute="trailingMargin" id="Xab-M3-nIL"/>
+                            <constraint firstItem="XFo-gU-Gic" firstAttribute="leading" secondItem="IhH-bs-QJy" secondAttribute="leadingMargin" id="Xcx-PI-ElD"/>
+                            <constraint firstItem="gXa-gA-Afy" firstAttribute="top" secondItem="IZj-BV-CoU" secondAttribute="bottom" constant="8" id="cbo-B1-aYr"/>
+                            <constraint firstItem="XFo-gU-Gic" firstAttribute="top" secondItem="IhH-bs-QJy" secondAttribute="topMargin" id="gsL-aw-MeY"/>
+                            <constraint firstItem="IZj-BV-CoU" firstAttribute="trailing" secondItem="IhH-bs-QJy" secondAttribute="trailingMargin" constant="8" id="xy0-dn-fkP"/>
+                            <constraint firstItem="gXa-gA-Afy" firstAttribute="top" secondItem="XFo-gU-Gic" secondAttribute="bottom" id="zJ4-oE-Bop"/>
+                            <constraint firstItem="qpX-ux-sR6" firstAttribute="leading" secondItem="IhH-bs-QJy" secondAttribute="leadingMargin" id="ztF-F9-ER5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="XFo-gU-Gic" id="oIn-wB-btc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJu-Z2-6A0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511.19999999999999" y="27.436281859070466"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="augmentReality" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ovS-zw-tBZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0L-Dp-qGb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Poj-Je-nPi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYr-uU-MHy" userLabel="cameraView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-ut-peG" userLabel="scnView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a0L-Dp-qGb" firstAttribute="top" secondItem="RYr-uU-MHy" secondAttribute="bottom" id="0Sw-Fo-5U5"/>
+                            <constraint firstItem="a0L-Dp-qGb" firstAttribute="top" secondItem="gEQ-ut-peG" secondAttribute="bottom" id="9pG-yy-e30"/>
+                            <constraint firstItem="a0L-Dp-qGb" firstAttribute="top" secondItem="gEQ-ut-peG" secondAttribute="bottom" id="DXJ-i9-vgX"/>
+                            <constraint firstAttribute="trailing" secondItem="gEQ-ut-peG" secondAttribute="trailing" id="KSI-ZU-IQk"/>
+                            <constraint firstAttribute="trailing" secondItem="RYr-uU-MHy" secondAttribute="trailing" id="Lmb-vh-P5u"/>
+                            <constraint firstItem="gEQ-ut-peG" firstAttribute="leading" secondItem="Poj-Je-nPi" secondAttribute="leading" id="fpl-hK-h6H"/>
+                            <constraint firstItem="RYr-uU-MHy" firstAttribute="top" secondItem="ovS-zw-tBZ" secondAttribute="bottom" id="hIR-8E-bdZ"/>
+                            <constraint firstItem="RYr-uU-MHy" firstAttribute="leading" secondItem="Poj-Je-nPi" secondAttribute="leading" id="iwP-w4-U6G"/>
+                            <constraint firstItem="gEQ-ut-peG" firstAttribute="top" secondItem="ovS-zw-tBZ" secondAttribute="bottom" id="qbi-gD-Nbn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="RYr-uU-MHy" id="OH5-mc-S2P"/>
+                        <outlet property="scnView" destination="gEQ-ut-peG" id="MQB-aL-naK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447.82608695652175" y="27.717391304347828"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="by6iOoZ.jpg" width="800" height="1162"/>
+    </resources>
+</document>

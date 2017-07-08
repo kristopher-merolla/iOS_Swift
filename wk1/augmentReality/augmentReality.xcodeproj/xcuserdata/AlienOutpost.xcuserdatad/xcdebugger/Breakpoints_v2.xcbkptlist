@@ -6,16 +6,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "augmentReality/GameViewController.swift"
+            timestampString = "521165349.08717"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "GameViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "addToTable/ViewController.swift"
-            timestampString = "521150571.426176"
+            filePath = "augmentReality/GameViewController.swift"
+            timestampString = "521165298.164959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "degrees(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,29 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "addToTable/ViewController.swift"
-            timestampString = "521151073.953811"
+            filePath = "augmentReality/GameViewController.swift"
+            timestampString = "521166187.313794"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "tableView(_:commit:forRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "addToTable/ViewController.swift"
-            timestampString = "521151075.524842"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "ViewController"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "GameViewController"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
