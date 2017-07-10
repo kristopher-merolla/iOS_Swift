@@ -10,6 +10,6 @@ import Foundation
 
 protocol AddItemTableViewControllerDelegate: class {
     // for save we pass back an item, hence the second parameter
-    func itemSaved(by controller: AddItemTableViewController, with text: String)
+    func itemSaved(by controller: AddItemTableViewController, with text: String, at indexPath: NSIndexPath?)
     func cancelButtonPressed(by controller: AddItemTableViewController)
 }

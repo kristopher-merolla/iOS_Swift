@@ -8,6 +8,7 @@
 
 import UIKit
 
+// need to add the AddItemTableViewControllerDelegate to the class line
 class BucketListViewController: UITableViewController, AddItemTableViewControllerDelegate {
     
     var items = ["Go to the moon","Eat a candy bar","Swim in the Amazon","Ride a motor bike in Tokyo"]
@@ -32,14 +33,35 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
         cell.textLabel?.text = items[indexPath.row]
         return cell
     }
+    
+    // how do you know what cell was clicked? make a function
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // use the sender (indexPath) to retrieve the item from the array
+        performSegue(withIdentifier: "EditItemSegue", sender: indexPath)
+        
+    }
 
     // need to override the prepare for segue function
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let navigationController = segue.destination as! UINavigationController
-        let addItemTableViewController = navigationController.topViewController as! AddItemTableViewController
-        addItemTableViewController.delegate = self
-        // need to add the CancelButtonDelegate to the class line
+        // check for segue type
+        if segue.identifier == "AddItemSegue" { // segue can be nammed on the main.storyboard
+            let navigationController = segue.destination as! UINavigationController
+            let addItemTableViewController = navigationController.topViewController as! AddItemTableViewController
+            addItemTableViewController.delegate = self
+        } else if segue.identifier == "EditItemSegue" { // segue can be nammed on the main.storyboard
+            let navigationController = segue.destination as! UINavigationController
+            let addItemTableViewController = navigationController.topViewController as! AddItemTableViewController
+            addItemTableViewController.delegate = self
+            // use sent index path to set item in table view controller
+            let indexPath = sender as! NSIndexPath
+            let item = items[indexPath.row]
+            addItemTableViewController.item = item
+            addItemTableViewController.indexPath = indexPath
+            
+        }
+        
+        
     }
     // add the function that lets this file be a cancel button delegate
     func cancelButtonPressed(by controller: AddItemTableViewController) {
@@ -48,10 +70,17 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
         dismiss(animated: true, completion: nil)
     }
     // add item
-    func itemSaved(by controller: AddItemTableViewController, with text: String) {
+    func itemSaved(by controller: AddItemTableViewController, with text: String, at indexPath: NSIndexPath?) {
+        // unwrap index path (if exists)
+        if let ip = indexPath {
+            // update existing item
+            items[ip.row] = text
+        } else {
+            // add the item (from text box) into table view array
+            items.append(text)
+        }
         print("text from top view recieved \(text)")
-        // add the item (from text box) into table view array
-        items.append(text)
+        
         // reload table view
         tableView.reloadData()
         // remove top view controller
