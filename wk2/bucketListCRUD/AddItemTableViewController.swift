@@ -21,7 +21,7 @@ class AddItemTableViewController: UITableViewController {
 
     // button press functions
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        // call the function on the delage swift file
+        // call the function on the delatge swift file
         delegate?.cancelButtonPressed(by: self)
     }
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {

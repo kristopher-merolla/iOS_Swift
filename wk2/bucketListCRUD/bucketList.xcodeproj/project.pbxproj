@@ -49,7 +49,7 @@
 		1D00EBD01F102A4800F94F22 /* bucketListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bucketListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D00EBD41F102A4800F94F22 /* bucketListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bucketListUITests.swift; sourceTree = "<group>"; };
 		1D00EBD61F102A4800F94F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D8545F91F141C06006C4D84 /* AddItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
+		1D8545F91F141C06006C4D84 /* AddItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemTableViewController.swift; path = ../AddItemTableViewController.swift; sourceTree = "<group>"; };
 		1D8545FD1F1428A9006C4D84 /* AddItemTableViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +81,6 @@
 		1D00EBA81F102A4700F94F22 = {
 			isa = PBXGroup;
 			children = (
-				1D8545F91F141C06006C4D84 /* AddItemTableViewController.swift */,
 				1D00EBB31F102A4700F94F22 /* bucketList */,
 				1D00EBC81F102A4800F94F22 /* bucketListTests */,
 				1D00EBD31F102A4800F94F22 /* bucketListUITests */,
@@ -104,6 +103,7 @@
 			children = (
 				1D00EBB41F102A4700F94F22 /* AppDelegate.swift */,
 				1D00EBB61F102A4700F94F22 /* BucketListViewController.swift */,
+				1D8545F91F141C06006C4D84 /* AddItemTableViewController.swift */,
 				1D8545FD1F1428A9006C4D84 /* AddItemTableViewControllerDelegate.swift */,
 				1D00EBB81F102A4700F94F22 /* Main.storyboard */,
 				1D00EBBB1F102A4700F94F22 /* Assets.xcassets */,

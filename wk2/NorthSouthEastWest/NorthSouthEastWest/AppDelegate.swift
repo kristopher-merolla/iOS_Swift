@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  tableViewSegues
+//  NorthSouthEastWest
 //
-//  Created by Kristopher Merolla on 7/11/17.
+//  Created by Kristopher Merolla on 7/12/17.
 //  Copyright © 2017 Kristopher Merolla. All rights reserved.
 //
 
