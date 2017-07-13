@@ -12,11 +12,6 @@ class ViewController: UIViewController {
     
     // create the mad lib space
     @IBOutlet weak var madLibSpace: UILabel!
-    var madLibStory: String?
-    // create story
-    var madLib = ["Last week, I heard the most interesting story about my ",".  Apparently, "," has "," and "," while they were sleeping!  Amazing..."]
-    
-    var story = "Last week, I heard the most interesting story about my ADJ NOUN.  Apparently, NOUN has VERB1 and VERB2 while they were sleeping!  Amazing..."
     
     // create words to insert into story
     var adjectiveForInsert: String?
@@ -26,8 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        madLibStory = "..."
-        madLibSpace.text = madLibStory
+        madLibSpace.text = "..."
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,10 +40,8 @@ class ViewController: UIViewController {
             verb1ForInsert = sourceViewController.verb1
             verb2ForInsert = sourceViewController.verb2
             nounForInsert = sourceViewController.noun
-            print(adjectiveForInsert ?? "missing adj")
-            madLibStory = "Last week, I heard the most interesting story about my " + adjectiveForInsert + nounForInsert + ".  Apparently, " + nounForInsert + " has " + verb1ForInsert + " and " + verb2ForInsert + " while sleeping!  Amazing..."
+            madLibSpace.text = adjectiveForInsert
         }
-        madLibSpace.text = madLibStory
     }
     
 
