@@ -93,6 +93,10 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="aeM-7E-btR" eventType="touchUpInside" id="KeA-Te-wOh"/>
+                                    <segue destination="HSg-xG-3QO" kind="unwind" identifier="unwindToMadLib" unwindAction="unwindToMadLibWithSegue:" id="hVg-lm-DsS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -114,8 +118,15 @@
                             <constraint firstItem="u1N-ma-1rT" firstAttribute="leading" secondItem="1bK-25-oL2" secondAttribute="leadingMargin" constant="112" id="x9n-pc-yAo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adjectiveText" destination="F6h-F6-mnG" id="gNJ-qa-y6a"/>
+                        <outlet property="nounText" destination="VdF-bR-CGe" id="4dn-Dm-HPV"/>
+                        <outlet property="verbText1" destination="gKN-z5-DAr" id="30f-U1-0BS"/>
+                        <outlet property="verbText2" destination="liW-S6-cOe" id="iLd-vK-Tnx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kn-F6-gW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HSg-xG-3QO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1904.8" y="123.68815592203899"/>
         </scene>
