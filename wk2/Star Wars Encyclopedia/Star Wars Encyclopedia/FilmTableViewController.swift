@@ -16,40 +16,29 @@ class FilmTableViewController: UITableViewController {
     // Create table view
     @IBOutlet var filmTable: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Specify the url that we will be sending the GET Request to
-        let url = URL(string: "http://swapi.co/api/films/")
-        // Create a URLSession to handle the request tasks
-        let session = URLSession.shared
-        // Create a "data task" which will request some data from a URL and then run a completion handler after it is done
-        let task = session.dataTask(with: url!, completionHandler: {
+        StarWarsModel.getAllFilms(completionHandler: { // passing what becomes "completionHandler" in the 'getAllFilms' function definition in StarWarsModel.swift
             data, response, error in
-            // We get data, response, and error back. Data contains the JSON data, Response contains the headers and other information about the response, and Error contains an error if one occured
-            // A "Do-Try-Catch" block involves a try statement with some catch block for catching any errors thrown by the try statement.
             do {
                 // Try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                     if let results = jsonResult["results"] as? NSArray {
                         for person in results {
-                            // cast to dictionary for data extraction
-                            let personDict = person as! NSDictionary
-                            self.films.append(personDict["title"]! as! String)
+                            let filmDict = person as! NSDictionary
+                            self.films.append(filmDict["title"]! as! String)
                         }
                     }
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
             } catch {
                 print("Something went wrong")
             }
         })
-        // Actually "execute" the task. This is the line that actually makes the request that we set up above
-        task.resume()
-        print("I happen before the response!")
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
