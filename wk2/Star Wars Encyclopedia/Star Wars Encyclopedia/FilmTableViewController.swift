@@ -1,25 +1,26 @@
 //
-//  TableViewController.swift
+//  FilmTableViewController.swift
 //  Star Wars Encyclopedia
 //
-//  Created by Kristopher Merolla on 7/14/17.
+//  Created by Kristopher Merolla on 7/17/17.
 //  Copyright © 2017 xCoders. All rights reserved.
 //
 
 import UIKit
 
-class PeopleViewController: UITableViewController {
+class FilmTableViewController: UITableViewController {
 
     // Initialize as an empty array of strings
-    var people = [String]()
+    var films = [String]()
     
     // Create table view
-    @IBOutlet var appTableView: UITableView!
+    @IBOutlet var filmTable: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // specify the url that we will be sending the GET Request to
-        let url = URL(string: "http://swapi.co/api/people/")
+        let url = URL(string: "http://swapi.co/api/films/")
         // create a URLSession to handle the request tasks
         let session = URLSession.shared
         // create a "data task" to make the request and run the completion handler
@@ -38,9 +39,10 @@ class PeopleViewController: UITableViewController {
                         let resultsArray = results as! NSArray
                         for i in 0..<resultsArray.count {
                             // grab the names from the resultsArray and populate the people array
-                            let person = (resultsArray[i] as AnyObject)["name"]! as! String
-                            print(person)
-                            self.people.append(person)
+                            // print(resultsArray[i])
+                            let film = (resultsArray[i] as AnyObject)["title"]! as! String
+                            print(film)
+                            self.films.append(film)
                             
                         }
                         // now we can run NSArray methods like count and firstObject
@@ -69,15 +71,14 @@ class PeopleViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // return the count of people in our data array
-        return people.count
+        return films.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create a generic cell
         let cell = UITableViewCell()
         // set the default cell label to the corresponding element in the people array
-        cell.textLabel?.text = people[indexPath.row]
+        cell.textLabel?.text = films[indexPath.row]
         // return the cell so that it can be rendered
         return cell
     }
-
 }
