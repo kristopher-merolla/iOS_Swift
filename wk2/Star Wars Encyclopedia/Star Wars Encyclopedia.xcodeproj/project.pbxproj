@@ -15,6 +15,7 @@
 		1DA953291F194121006E4C56 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA953281F194121006E4C56 /* PeopleViewController.swift */; };
 		1DA9532D1F1D425D006E4C56 /* FilmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9532C1F1D425D006E4C56 /* FilmTableViewController.swift */; };
 		1DA9532F1F1D6064006E4C56 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9532E1F1D6064006E4C56 /* StarWarsModel.swift */; };
+		1DA953311F1D6427006E4C56 /* PeopleInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA953301F1D6427006E4C56 /* PeopleInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1DA953281F194121006E4C56 /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		1DA9532C1F1D425D006E4C56 /* FilmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmTableViewController.swift; sourceTree = "<group>"; };
 		1DA9532E1F1D6064006E4C56 /* StarWarsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
+		1DA953301F1D6427006E4C56 /* PeopleInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1DA953131F1940AD006E4C56 /* AppDelegate.swift */,
 				1DA953171F1940AD006E4C56 /* Main.storyboard */,
 				1DA953281F194121006E4C56 /* PeopleViewController.swift */,
+				1DA953301F1D6427006E4C56 /* PeopleInfoVC.swift */,
 				1DA9532E1F1D6064006E4C56 /* StarWarsModel.swift */,
 				1DA9532C1F1D425D006E4C56 /* FilmTableViewController.swift */,
 				1DA9531D1F1940AD006E4C56 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				1DA953141F1940AD006E4C56 /* AppDelegate.swift in Sources */,
 				1DA9531C1F1940AD006E4C56 /* Star_Wars_Encyclopedia.xcdatamodeld in Sources */,
 				1DA9532F1F1D6064006E4C56 /* StarWarsModel.swift in Sources */,
+				1DA953311F1D6427006E4C56 /* PeopleInfoVC.swift in Sources */,
 				1DA953291F194121006E4C56 /* PeopleViewController.swift in Sources */,
 				1DA9532D1F1D425D006E4C56 /* FilmTableViewController.swift in Sources */,
 			);
