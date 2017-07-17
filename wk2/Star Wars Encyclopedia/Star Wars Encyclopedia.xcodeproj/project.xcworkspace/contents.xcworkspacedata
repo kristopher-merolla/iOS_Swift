@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Codelaborate.xcodeproj">
+      location = "self:Star Wars Encyclopedia.xcodeproj">
    </FileRef>
 </Workspace>

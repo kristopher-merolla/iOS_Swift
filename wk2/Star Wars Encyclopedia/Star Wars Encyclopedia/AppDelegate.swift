@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Codelaborate
+//  Star Wars Encyclopedia
 //
-//  Created by Kristopher Merolla on 7/13/17.
+//  Created by Kristopher Merolla on 7/14/17.
 //  Copyright © 2017 xCoders. All rights reserved.
 //
 
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "Codelaborate")
+        let container = NSPersistentContainer(name: "Star_Wars_Encyclopedia")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
