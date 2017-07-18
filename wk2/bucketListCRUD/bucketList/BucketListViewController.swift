@@ -11,10 +11,35 @@ import UIKit
 // need to add the AddItemTableViewControllerDelegate to the class line
 class BucketListViewController: UITableViewController, AddItemTableViewControllerDelegate {
     
-    var items = ["Go to the moon","Eat a candy bar","Swim in the Amazon","Ride a motor bike in Tokyo"]
+    var items = [String]()
 
     override func viewDidLoad() {
+        // Run our function to get all the tasks from the database
+        TaskModel.getAllTasks() {
+            data, response, error in
+            do {
+                if let tasks = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSArray {
+                    //print(tasks)
+                    for task in tasks {
+                        //print(task)
+                        //print((task as AnyObject)["objective"])
+                        if let objective = (task as AnyObject)["objective"] as? String {
+                            print(objective)
+                            self.items.append(objective)
+                        }
+                    }
+                    // reload the table view
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            } catch { // if there is a problem, catch
+                print("Something went wrong")
+            }
+        }
+        // load from parent class
         super.viewDidLoad()
+
     }
 
     override func didReceiveMemoryWarning() {
