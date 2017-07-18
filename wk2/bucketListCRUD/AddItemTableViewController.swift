@@ -26,6 +26,7 @@ class AddItemTableViewController: UITableViewController {
     }
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         let text = itemTextField.text! // force unwrap
+        // call our save function
         delegate?.itemSaved(by: self, with: text, at: indexPath)
     }
     

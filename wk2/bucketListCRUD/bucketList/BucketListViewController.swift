@@ -14,16 +14,28 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
     var items = [String]()
 
     override func viewDidLoad() {
+        // load from parent class
+        super.viewDidLoad()
+        // grab all items
+        fetchAllItems()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func fetchAllItems() {
         // Run our function to get all the tasks from the database
         TaskModel.getAllTasks() {
             data, response, error in
             do {
-                if let tasks = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSArray {
+                if let tasks = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [NSDictionary] {
                     //print(tasks)
                     for task in tasks {
                         //print(task)
                         //print((task as AnyObject)["objective"])
-                        if let objective = (task as AnyObject)["objective"] as? String {
+                        if let objective = task["objective"] as? String {
                             print(objective)
                             self.items.append(objective)
                         }
@@ -37,14 +49,6 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
                 print("Something went wrong")
             }
         }
-        // load from parent class
-        super.viewDidLoad()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // how many cells to display
@@ -102,6 +106,7 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
         // remove top view controller
         dismiss(animated: true, completion: nil)
     }
+    
     // add item
     func itemSaved(by controller: AddItemTableViewController, with text: String, at indexPath: NSIndexPath?) {
         // unwrap index path (if exists)
@@ -111,6 +116,7 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
         } else {
             // add the item (from text box) into table view array
             items.append(text)
+            addTask(with: text)
         }
         print("text from top view recieved \(text)")
         
@@ -118,6 +124,25 @@ class BucketListViewController: UITableViewController, AddItemTableViewControlle
         tableView.reloadData()
         // remove top view controller
         dismiss(animated: true, completion: nil)
+    }
+    
+    func addTask(with objective: String) {
+        // Run our function to get all the tasks from the database
+        TaskModel.addTaskWithObjective(objective: objective) {
+            data, response, error in
+            do {
+                if let d = data {
+                    if (try JSONSerialization.jsonObject(with: d, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary) != nil {
+                        // reload the table view
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            } catch { // if there is a problem, catch
+                print("Something went wrong")
+            }
+        }
     }
 
 }
